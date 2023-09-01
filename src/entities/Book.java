@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Arrays;
 
+import constants.BookGenre;
+
 public class Book extends Bookmark {
 	private int publicationYear;
 	private String publisher;
@@ -57,7 +59,9 @@ public class Book extends Bookmark {
 
 	@Override
 	public boolean isKidFriendlyEligible() {
-		// TODO Auto-generated method stub
+		if(genre.equals(BookGenre.PHILOSOPHY) || genre.equals(BookGenre.SELF_HELP)) {
+			return false;
+		}
 		return true;
 	}
 
