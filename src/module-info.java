@@ -5,4 +5,5 @@
  * 
  */
 module userbookmark {
+	requires junit;
 }
