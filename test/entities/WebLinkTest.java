@@ -8,7 +8,15 @@ public class WebLinkTest {
 
 	@Test
 	public void testIsKidFriendlyEligible() {
-		fail("Not yet implemented");
+		//Test 1: porn in url -- false
+		
+		//Test 2 porn in title -- false
+		
+		//Test 3 adult in host -- false
+		
+		//Test 4 adult in url but not in host -- true
+		
+		//Test 5 adult in title only -- true
 	}
 
 }
