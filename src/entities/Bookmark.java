@@ -1,9 +1,22 @@
 package entities;
 
+import constants.KidFriendlyStatus;
+
 public abstract class Bookmark {
 	private long id;
 	private String title;
 	private String profileUrl;
+	private String kidFriendlyStatus = KidFriendlyStatus.UNKNOWN;
+	private User kidFriendlyMarkedBy;
+	private User sharedBy;
+
+	public String getKidFriendlyStatus() {
+		return kidFriendlyStatus;
+	}
+
+	public void setKidFriendlyStatus(String kidFriendlyStatus) {
+		this.kidFriendlyStatus = kidFriendlyStatus;
+	}
 
 	public long getId() {
 		return id;
@@ -29,4 +42,21 @@ public abstract class Bookmark {
 		this.profileUrl = profileUrl;
 	}
 	public abstract boolean isKidFriendlyEligible();
+
+	public User getKidFriendlyMarkedBy() {
+		return kidFriendlyMarkedBy;
+	}
+
+	public void setKidFriendlyMarkedBy(User user) {
+		this.kidFriendlyMarkedBy = user;
+	}
+
+	public User getSharedBy() {
+		return sharedBy;
+	}
+
+	public void setSharedBy(User sharedBy) {
+		this.sharedBy = sharedBy;
+	}
+
 }

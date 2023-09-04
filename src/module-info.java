@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module userbookmark {
-	requires junit;
-}
